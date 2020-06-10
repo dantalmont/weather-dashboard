@@ -18,4 +18,6 @@
 <br>WHEN I open the weather dashboard
 <br>THEN I am presented with the last searched city forecast
 
+link: https://dantalmont.github.io/weather-dashboard/
+
 ![Screen Shot 2020-06-09 at 9 56 47 PM](https://user-images.githubusercontent.com/62626932/84218995-97b48900-aa9d-11ea-8e07-b497df031b74.png)
