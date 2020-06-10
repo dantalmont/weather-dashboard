@@ -1,4 +1,3 @@
-
 //Global Function for converting Kevin to Fahrenheit
 function toFahrenheit (a){ 
   var decTemp = (a-273.15) * (9/5)+32;
@@ -16,7 +15,7 @@ $("#city-search").on("click", function(event) {
   var today = " (" + moment().format('l') + ") ";
   var city = $("#city-input").val();
   var key ="9546d99cd10770006eac8569a744792c"
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
   var temp = "Temp: "
   var humid = "Humidity: "
    
@@ -34,7 +33,7 @@ $.ajax({
     
 //second ajax request to populate a 5 day weather forecast
 $.ajax({
-  url: "http://api.openweathermap.org/data/2.5/uvi?appid=" +key + "&lat=" + json.coord.lat +"&lon=" + json.coord.lon,
+  url: "https://api.openweathermap.org/data/2.5/uvi?appid=" +key + "&lat=" + json.coord.lat +"&lon=" + json.coord.lon,
   method: "GET"
   }).then(function(response) {
   $("#uvIndex").val(response.value);
@@ -66,7 +65,7 @@ $.ajax({
     var futureDays =moment().add(i, 'days').format('l');
     
     $("#fiveDate" + i).val(futureDays);
-    $("#fiveIcon" + i).attr("src", "http://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
+    $("#fiveIcon" + i).attr("src", "https://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
     
     // console.log(fiveDaily.daily[i].weather[0].icon);
     
@@ -95,7 +94,7 @@ $.ajax({
       var today = " (" + moment().format('l') + ") ";
       var city = histCity
       var key ="9546d99cd10770006eac8569a744792c"
-      var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
+      var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
       var temp = "Temp: "
       var humid = "Humidity: "
       
@@ -107,7 +106,7 @@ $.ajax({
         $("#city").val((json.name) + (today));
         $("#wind-speed").val(json.wind.speed + " MPH");
         $("#description_weather").val(json.weather[0].description);
-        $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+        $("#weather_image").attr("src", "https://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
           var tempFar = toFahrenheit(json.main.temp);
         $("#temperature").val(tempFar + '°F');
         $("#humidity").val((json.main.humidity + "%"));
@@ -117,7 +116,7 @@ $.ajax({
         
 
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=" +key + "&lat=" + json.coord.lat +"&lon=" + json.coord.lon,
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=" +key + "&lat=" + json.coord.lat +"&lon=" + json.coord.lon,
             method: "GET"
           }).then(function(response) {
             $("#uvIndex").val(response.value);
