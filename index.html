@@ -1,0 +1,99 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+<header class="jumbotron">
+    <h1 class="display-3">Weather Dashboard</h1>
+</header>
+<div class="mambo">
+    <div class="leftNav">
+        <div class="citySearch">
+            <form id="city-form">
+                <div>
+                    <label for="city-input">Search For a City:</label>
+                </div>
+                    <input type="text" id="city-input">
+                    <button id="city-search">
+                        <i class="fa fa-search"></i>
+                    </button>
+            </form>
+
+            <div class="weatherHistory">
+                <h4><span id="city-history"></span></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightBody">
+        <div id= "current-weather">
+            <div>
+                <div>
+                    <h2><input type="text" id="city" readonly><a></a><img id="weather_image" src=""></h2>
+                    <h4>Temperature: <input type="text" id="temperature" readonly></h4>
+                    <h4>Humidity: <input type="text" id="humidity" readonly></h4>
+                    <h4>Wind Speed: <input type="text" id="wind-speed" readonly></h4>
+                    <h4>UV Index: <input type="text" id="uvIndex" readonly></h4>   
+                </div>
+            </div>  
+        </div>
+        <h4>5 Day Forecast:</h4>
+        <div id="forecast">
+            <div class="row">
+                <div class="forecastBlock" text-left>
+                    <h4><input type="text" id="fiveDate1" readonly></h4>
+                    <img id="fiveIcon1" src="">
+                    <a><input type="text" id="fiveTemp1" readonly></a>
+                    <a><input type="text" id="fiveHumidity1" readonly></a>
+                </div>
+                <div class="forecastBlock">
+                    <h4><input type="text" id="fiveDate2" readonly></h4>
+                    <img id="fiveIcon2" src="">
+                    <a><input type="text" id="fiveTemp2" readonly></a>
+                    <a><input type="text" id="fiveHumidity2" readonly></a>
+                </div>
+                <div class="forecastBlock">
+                    <h4><input type="text" id="fiveDate3" readonly></h4>
+                    <img id="fiveIcon3" src="">
+                    <a><input type="text" id="fiveTemp3" readonly></a>
+                    <a><input type="text" id="fiveHumidity3" readonly></a>
+                </div>
+                <div class="forecastBlock">
+                    <h4><input type="text" id="fiveDate4" readonly></h2>
+                    <img id="fiveIcon4" src="">
+                    <a><input type="text" id="fiveTemp4" readonly></a>
+                    <a><input type="text" id="fiveHumidity4" readonly></a>
+                </div>
+                <div class="forecastBlock">
+                    <h4><input type="text" id="fiveDate5" readonly></h4>
+                    <img id="fiveIcon5" src="">
+                    <a><input type="text" id="fiveTemp5" readonly></a>
+                    <a><input type="text" id="fiveHumidity5" readonly></a>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>    
+
+
+
+
+
+    
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
