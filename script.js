@@ -94,7 +94,7 @@ $.ajax({
       var today = " (" + moment().format('l') + ") ";
       var city = histCity
       var key ="9546d99cd10770006eac8569a744792c"
-      var queryURL = ""https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
+      var queryURL = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" + key;
       var temp = "Temp: "
       var humid = "Humidity: "
       
