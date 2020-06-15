@@ -26,7 +26,7 @@ $.ajax({
   $("#city").val((json.name) + (today));
   $("#wind-speed").val(json.wind.speed + " MPH");
   $("#description_weather").val(json.weather[0].description);
-  $("#weather_image").attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+  $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
     var tempFar = toFahrenheit(json.main.temp);
   $("#temperature").val(tempFar + '°F');
   $("#humidity").val((json.main.humidity) + "%");
@@ -65,7 +65,7 @@ $.ajax({
     var futureDays =moment().add(i, 'days').format('l');
     
     $("#fiveDate" + i).val(futureDays);
-    $("#fiveIcon" + i).attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
+    $("#fiveIcon" + i).attr("src", "http://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
     
     // console.log(fiveDaily.daily[i].weather[0].icon);
     
@@ -106,7 +106,7 @@ $.ajax({
         $("#city").val((json.name) + (today));
         $("#wind-speed").val(json.wind.speed + " MPH");
         $("#description_weather").val(json.weather[0].description);
-        $("#weather_image").attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+        $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
           var tempFar = toFahrenheit(json.main.temp);
         $("#temperature").val(tempFar + '°F');
         $("#humidity").val((json.main.humidity + "%"));
@@ -150,7 +150,7 @@ $.ajax({
               //console.log(fiveDaily.daily[i]);
               var futureDays =moment().add(i, 'days').format('l');
               $("#fiveDate" + i).val(futureDays);
-              $("#fiveIcon" + i).attr("src", "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
+              $("#fiveIcon" + i).attr("src", "http://openweathermap.org/img/w/" + fiveDaily.daily[i].weather[0].icon + ".png");
               console.log(fiveDaily.daily[i].weather[0].icon);
                 var tempFar2 = toFahrenheit(fiveDaily.daily[i].temp.day)
               $("#fiveTemp" + i).val(temp + tempFar2 + '°F');
